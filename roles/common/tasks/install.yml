@@ -50,9 +50,12 @@
     - Office
     - Money
 
+- name: Install AUFS-Tools
+  apt: name=aufs-tools
+  tags: System
+
 - name: Install AutoFS
   apt: name=autofs
-  apt: name=aufs-tools
   tags: System
 
 - name: Install Blender 3D Graphics Generator
@@ -70,5 +73,3 @@
   tags:
     - Media
     - Books
-
-  
