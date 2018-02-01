@@ -1,6 +1,23 @@
 ---
 # This playbook contains common plays that will be run on all nodes.
 
-- name: Install ntp
-  apt: name=ntp state=present
-  tags: ntp
+- name: Install Android Debugging Tool adb
+  apt: name=adb state=present
+  tags: adb
+
+- name: Install Amarok Mediaplayer
+  apt: name=amarok state=present
+  tags: Media
+
+- name: Install Apache Webserver
+  apt: name=apache2-bin state=present
+  tags: Webserver
+
+- name: Install Apache Webserver Utilities
+  apt: name=apache2-utils state=present
+  tags: Webserver
+
+- name: Install apturl for KDE
+  apt: name=apturl-kde state=present
+  tags: KDE
+  
