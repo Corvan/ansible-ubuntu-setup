@@ -2,7 +2,7 @@
 # This playbook contains common plays that will be run on all nodes.
 
 - name: Update apt Cache
-  apt: update_cache: yes
+  apt: update_cache=yes
 
 - name: Install Android Debugging Tool adb
   apt: name=adb state=present
@@ -44,6 +44,17 @@
     - Media
     - Audio
 
+- name: Install AqBanking Tools
+  apt: name=aqbanking-tools state=present
+  tags:
+    - Office
+    - Money
+
+- name: Install AutoFS
+  apt: name=autofs
+  apt: name=aufs-tools
+  tags: System
+
 - name: Install Blender 3D Graphics Generator
   apt: name=audacity state=present
   tags: Graphics
@@ -59,12 +70,3 @@
   tags:
     - Media
     - Books
-
-- name: Install AqBanking Tools
-  apt: name=aqbanking-tools state=present
-  tags:
-    - Office
-    - Money
-- name: Install AutoFS
-  apt: name=aufs-tools
-  tags: System
