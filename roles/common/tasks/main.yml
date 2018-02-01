@@ -1,2 +1,2 @@
 ---
-# This playbook contains common plays that will be run on all nodes.
+- import_tasks: roles/common/tasks/install.yml
