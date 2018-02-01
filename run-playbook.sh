@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ansible-playbook -v -i "all" site.yml
+sudo ansible-playbook -v site.yml
