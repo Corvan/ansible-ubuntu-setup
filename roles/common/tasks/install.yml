@@ -31,11 +31,15 @@
 
 - name: Install Ardour DAW
   apt: name=ardour state=present
-  tags: Media
+  tags:
+    - Media
+    - Audio
 
 - name: Install Audacity Audio editor
   apt: name=audacity state=present
-  tags: Media
+  tags:
+    - Media
+    - Audio
 
 - name: Install Blender 3D Graphics Generator
   apt: name=audacity state=present
@@ -43,7 +47,14 @@
 
 - name: Install Brasero CD-Burner
   apt: name=brasero state=present
-  tags: Media
+  tags:
+    - Media
+    - Audio
 
 - name: Install Calibre E-Book Suite
   apt: name=calibre state=present
+  tags:
+    - Media
+    - Books
+
+-
