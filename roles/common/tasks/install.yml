@@ -38,6 +38,19 @@
     - Media
     - Audio
 
+- name: Download Atom Editor
+  get_url:
+    url: https://atom.io/download/deb
+    dest: /home/lars/Download
+    mode: 0440
+  register: atom_return
+
+- name: Install Atom Editor
+  apt: deb={{ atom_return.dest }}
+  tags:
+    - Software Development
+    - Editor
+
 - name: Install Audacity Audio editor
   apt: name=audacity state=present
   tags:
@@ -59,6 +72,12 @@
   tags:
     - System
     - Filesystem
+
+- name: Install Basic256 IDE
+  apt: name=basic256 state=present
+  tags:
+    - Software Development
+    - IDE
 
 - name: Install Blender 3D Graphics Generator
   apt: name=audacity state=present
