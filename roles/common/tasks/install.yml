@@ -1,0 +1,49 @@
+---
+# This playbook contains common plays that will be run on all nodes.
+
+- name: Install Android Debugging Tool adb
+  apt: name=adb state=present
+  tags: Android
+
+- name: Install Amarok Mediaplayer
+  apt: name=amarok state=present
+  tags: Media
+
+- name: Install Apache Webserver
+  apt: name=apache2-bin state=present
+  tags: Webserver
+
+- name: Install Apache Webserver Utilities
+  apt: name=apache2-utils state=present
+  tags: Webserver
+
+- name: Install Aptitude apt wrapper
+  apt: name=aptitude state=present
+  tags: System
+
+- name: Install Ark packaging archiver
+  apt: name=ark state=present
+  tags: System
+
+- name: Install apturl for KDE
+  apt: name=apturl-kde state=present
+  tags: KDE
+
+- name: Install Ardour DAW
+  apt: name=ardour state=present
+  tags: Media
+
+- name: Install Audacity Audio editor
+  apt: name=audacity state=present
+  tags: Media
+
+- name: Install Blender 3D Graphics Generator
+  apt: name=audacity state=present
+  tags: Graphics
+
+- name: Install Brasero CD-Burner
+  apt: name=brasero state=present
+  tags: Media
+
+- name: Install Calibre E-Book Suite
+  apt: name=calibre state=present
