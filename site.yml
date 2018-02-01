@@ -2,14 +2,21 @@
 # Stuff common for all hosts
 - name: apply common configuration to all nodes
   hosts: localhost
-  remote_user: root
 
   roles:
     - common
   become: true
   become_user: root
 
-  tasks:
+- name: Configuration for Denephor
+  hosts: Denephor
+
+  roles:
+    - denephor
+  become: true
+  become_user: root
+
+  #tasks:
     #import_tasks: roles/common/tasks/copy_files.yml
-    import_tasks: roles/common/tasks/install.yml
+
     #import_tasks: roles/common/tasks/restart_services.yml
