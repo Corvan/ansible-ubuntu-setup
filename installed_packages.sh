@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 comm -13 \
   <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort) \
   <(comm -23 \
