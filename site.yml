@@ -1,7 +1,7 @@
 ---
 # Stuff common for all hosts
 - name: apply common configuration to all nodes
-  hosts: all
+  hosts: localhost
   remote_user: root
 
   roles:
