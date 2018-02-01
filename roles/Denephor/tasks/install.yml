@@ -1,5 +1,11 @@
 ---
-- name: Installing NVidia Drivers
+- name: Installing NVidia Drivers Version 384
+  apt: name=nvidia-384
+  tags:
+    - System
+    - Graphics
+
+- name: Installing NVidia Drivers Version 390
   apt: name=nvidia-384
   tags:
     - System
