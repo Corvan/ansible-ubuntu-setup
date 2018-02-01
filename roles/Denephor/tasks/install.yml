@@ -1,11 +1,17 @@
 ---
-- name: NVidia Drivers
-  apt: name=nvidia-361
-  apt: name=nvidia-367
-  apt: name=nvidia-375
-  apt: name=nvidia-378
+- name: Installing NVidia Drivers
   apt: name=nvidia-384
+  tags:
+    - System
+    - Graphics
+
+- name: Installing NVidia CG development files
   apt: name=nvidia-cg-dev
+  tags:
+    - System
+    - Graphics
+
+- name: Installing NVidia CG Toolkit
   apt: name=nvidia-cg-toolkit
   tags:
     - System
