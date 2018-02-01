@@ -1,5 +1,7 @@
 ---
 # This playbook contains common plays that will be run on all nodes.
-# import_playbook: copy_files.yml
-import_playbook: install.yml
-# import_playbook: restart_services.yml
+
+- tasks:
+  #- import_tasks: copy_files.yml
+  - import_tasks: install.yml
+  #- import_tasks: restart_services.yml
