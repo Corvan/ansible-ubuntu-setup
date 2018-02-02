@@ -4,123 +4,6875 @@
 - name: Update apt Cache
   apt: update_cache=yes
 
-- name: Install Android Debugging Tool adb
+- name: Installing Android Debugging Tool adb
   apt: name=adb state=present
   tags: Android
 
-- name: Install Amarok Mediaplayer
+- name: Installing Amarok Mediaplayer
   apt: name=amarok state=present
   tags: Media
 
-- name: Install Apache Webserver
+- name: Installing Apache Webserver
   apt: name=apache2-bin state=present
   tags: Webserver
 
-- name: Install Apache Webserver Utilities
+- name: Installing Apache Webserver Utilities
   apt: name=apache2-utils state=present
   tags: Webserver
 
-- name: Install Aptitude apt wrapper
+- name: Installing Aptitude apt wrapper
   apt: name=aptitude state=present
   tags: System
 
-- name: Install Ark packaging archiver
+- name: Installing Ark packaging archiver
   apt: name=ark state=present
   tags: System
 
-- name: Install apturl for KDE
+- name: Installing apturl for KDE
   apt: name=apturl-kde state=present
   tags: KDE
 
-- name: Install Ardour DAW
+- name: Installing Ardour DAW
   apt: name=ardour state=present
   tags:
     - Media
     - Audio
 
-- name: Download Atom Editor
+- name: Downloading Atom Editor
   get_url:
     url: https://atom.io/download/deb
     dest: /home/lars/Download
+    ownser: lars
+    group: lars
     mode: 0440
   register: atom_return
 
-- name: Install Atom Editor
+- name: Installing Atom Editor
   apt: deb={{ atom_return.dest }}
   tags:
     - Software Development
     - Editor
 
-- name: Install Audacity Audio editor
+- name: Installing Audacity Audio editor
   apt: name=audacity state=present
   tags:
     - Media
     - Audio
 
-- name: Install AqBanking Tools
+- name: Installing AqBanking Tools
   apt: name=aqbanking-tools state=present
   tags:
     - Office
     - Money
 
-- name: Install AUFS-Tools
+- name: Installing AUFS-Tools
   apt: name=aufs-tools state=present
   tags: System
 
-- name: Install AutoFS
+- name: Installing AutoFS
   apt: name=autofs state=present
   tags:
     - System
     - Filesystem
 
-- name: Install Basic256 IDE
+- name: Installing Basic256 IDE
   apt: name=basic256 state=present
   tags:
     - Software Development
     - IDE
 
-- name: Install Blender 3D Graphics Generator
+- name: Installing Blender 3D Graphics Generator
   apt: name=audacity state=present
   tags: Graphics
 
-- name: Install Brasero CD-Burner
+- name: Installing Brasero CD-Burner
   apt: name=brasero state=present
   tags:
     - Media
     - Audio
 
-- name: Install Calibre E-Book Suite
+- name: Installing Calibre E-Book Suite
   apt: name=calibre state=present
   tags:
     - Media
     - Books
 
-- name: Install Clementine CD Ripper
+- name: Installing Clementine CD Ripper
   apt: name=clementine state=present
   tags:
     - Media
     - Audio
 
-- name: Install CIFS-Utils
+- name: Installing CIFS-Utils
   apt: name=cifs-utils state=present
   tags:
     - System
     - Filesystem
 
-- name: Install CUPS backend
+- name: Installing CUPS backend
   apt: name=cups-backend-bjnp state=present
   tags:
     - System
     - Printer
 
-- name: Install CUPS Internet Printing Protocoll Utitltites
+- name: Installing CUPS Internet Printing Protocoll Utitltites
   apt: name=cups-ipp-utils state=present
   tags:
     - System
     - Printer
 
-- name: Install Cuneiform OCR
+- name: Installing Cuneiform OCR
   apt: name=cuneiform state=present
   tags:
     - Office
     - Documents
+
+- name: Installing Darktable Photo editor
+  apt: name=darktable state=present
+  tags:
+    - Media
+    - Photo
+
+- name: Installing DAVFS WebDAV filesystem integration
+  apt: name=davfs2 state=present
+  tags:
+    - System
+    - Filesystem
+
+- name: Installing Dia Diagram Drawing
+  apt: name=dia state=present
+  tags:
+    - Media
+    - Graphics
+
+- name: Installing Owncloud/Nextcloud Integration for dolphin
+  apt: name=dolphin-owncloud state=present
+  tags:
+    - System
+    - Filemanager
+
+- name: Installing extended FAT FUSE integration
+  apt: name=exfat-fuse state=present
+  tags:
+    - System
+    - Filesystem
+
+- name: Installing extended FAT Utitltites
+  apt: name=exfat-utils state=present
+  tags:
+    - System
+    - Filesystem
+
+- name:  Installing Filezilla file transfer
+  apt: name=Filezilla state=present
+  tags:
+    - System
+    - Filemanager
+- name: Installing accountsservice-ubuntu-schemas
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing accountsservice-ubuntu-touch-schemas
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing accountwizard
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing adb
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing adwaita-icon-theme-full
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing agedu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing akonadi-backend-mysql
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing akonadi-server
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing akregator
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing amarok
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing amarok-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing amarok-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libadb
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libbacktrace
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libext4-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libf2fs-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libselinux
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libsparse
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libunwind
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libutils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-libziparchive
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-sdk-platform-tools-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing android-tools-fastboot
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ansible
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing antlr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing apache2-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing apparmor-easyprof
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing apparmor-easyprof-ubuntu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing apport-kde
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing aptitude
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing apturl-kde
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing apt-xapian-index
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing aqbanking-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing aqemu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ardour
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing argyll-ref
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ark
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing asunder
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing atom
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing audacity
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing audacity-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing aufs-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing autofs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing autotools-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing avrdude
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing avr-libc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing backintime-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing backintime-qt4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing baloo-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing basic256
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing basket
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing basket-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing beneath-a-steel-sky
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing berusky
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing berusky-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing binutils-avr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing biometryd-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing blender
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing blender-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bogofilter
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bogofilter-bdb
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bogofilter-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bookworm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing brasero
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bridge-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bsdtar
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bwidget
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing bwsyncandshare
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cabextract
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calibre
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligra-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligra-libs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligrasheets
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligrastage
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligrastage-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligrawords
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing calligrawords-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cantata
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cantor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing caribou
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cdrdao
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cdrskin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cgmanager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cgroupfs-mount
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cifs-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cinnamon-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cinnamon-control-center
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cinnamon-control-center-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cinnamon-screensaver
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cinnamon-settings-daemon
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing clang
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing clementine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing click
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing click-apparmor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing clonezilla
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cloud-image-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cmake
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing code
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing containerd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing content-hub
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing corsix-th
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing corsix-th-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cpu-checker
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cryptomator
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cuneiform
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cups-backend-bjnp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cups-ipp-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing cvs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing darktable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing davfs2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dbus-user-session
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dconf-editor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ddate
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing debconf-kde-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing debootstrap
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing default-jre
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dia
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dia-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dialog
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dia-shapes
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing discover
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing distro-info
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dleyna-renderer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing docker-ce
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dolphin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dolphin4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dolphin-owncloud
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing dragonplayer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing easytag-nautilus
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ebtables
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing emacs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing exfat-fuse
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing exfat-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing exo-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing extlinux
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fastboot
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ffmpegthumbs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing filelight
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing filezilla
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing firehol
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing firejail
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing firetools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-cantarell
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-crosextra-caladea
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-crosextra-carlito
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-droid-fallback
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-font-awesome
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-hack-ttf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-linuxlibertine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-lyx
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-octicons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-roboto-hinted
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-sil-gentium
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-sil-gentium-basic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fonts-wine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fping
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing freecol
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing freemedforms-libs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing freerdp-x11
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing frescobaldi
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing fslint
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gadmin-openvpn-client
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing game-data-packager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gcc-7-base
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gcc-avr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gdb-avr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gdebi-core
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gelemental
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gigolo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gimagereader
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gimp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-appstreamglib-1.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-champlain-0.12
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-click-0.4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-evince-3.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gdesktopenums-3.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gee-0.8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-geoclue-2.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gexiv2-0.10
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gfbgraph-0.2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gnomedesktop-3.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-goocanvas-2.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gtkchamplain-0.12
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gtkspell3-3.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-gusb-1.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-keybinder-3.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-polkit-1.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gir1.2-zpj-0.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing git
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gitbook-editor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gjs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing glassfish-javaee
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnash
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnash-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-accessibility-profiles
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-backgrounds
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-contacts
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-control-center
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-control-center-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-documents
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-getting-started-docs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-getting-started-docs-de
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-icon-theme
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-logs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-online-accounts
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-online-miners
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-settings-daemon
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-themes-standard
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnome-user-docs-de
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-back0.25
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-back0.25-cairo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-back-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-base-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-base-runtime
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-gui-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gnustep-gui-runtime
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gocr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.7-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.7-go
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.7-race-detector-runtime
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.7-src
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.8-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.8-go
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.8-race-detector-runtime
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing golang-1.8-src
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing go-mtpfs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing goobox
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing google-chrome-stable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gparted
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gpgsm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gpodder
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing grafana
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing graphviz
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gresistor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing grub-customizer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gsfonts-x11
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gstreamer1.0-vaapi
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gstreamer-qapt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gtk2-engines-oxygen
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gtk2-engines-pixbuf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gtk3-engines-breeze
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gtk3-nocsd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing guile-1.8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing guile-1.8-libs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gwenhywfar-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing gwenview
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing harvid
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing heimdall-flash
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing heimdall-flash-frontend
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing history-service
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing hwinfo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ibus-qt4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing icc-profiles-free
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing icoutils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing iftop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing indicator-multiload
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing indicator-network
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing indicator-transfer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing inkscape
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing inotify-hookable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing inotify-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing iotop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing iprange
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ipxe-qemu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing iscan
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing iscan-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing jamin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing javahelp2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing jfsutils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing jpdbamdb-free-gtk
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing junit
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing k3b
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing k3b-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kaccounts-integration
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kaddressbook
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kamera
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kapptemplate
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kate
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kate5-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kate-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing katepart
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kcalc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdeartwork
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdeartwork-emoticons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdeartwork-wallpapers
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-baseapps-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-config-gtk-style-preview
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-config-mailtransport
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-config-systemd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-config-telepathy-accounts
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-config-touchpad
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-config-whoopsie
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdeconnect
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdeconnect-plasma
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdegraphics-thumbnailers
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-l10n-de
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdelibs5-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdelibs-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdemultimedia-kio-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdenetwork-filesharing
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdenlive
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdepim-addons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdepimlibs-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdepimlibs-kio-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdepim-runtime
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdepim-themeeditors
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdeplasma-addons-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-runtime-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-spectacle
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-style-oxygen
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-style-oxygen-qt4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-approver
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-auth-handler
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-contact-list
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-desktop-applets
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-filetransfer-handler
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-integration-module
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-kaccounts
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-kpeople
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-minimal
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-send-file
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-telepathy-text-ui
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-touchpad
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdevelop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdevelop-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdev-python
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-wallpapers
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kde-wallpapers-default
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kdoctools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing keepass2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing keepass2-plugin-keepasshttp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kerneloops
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kerneloops-applet
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kf5-kdepim-apps-libs-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kf5-messagelib-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kfind
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing khelpcenter4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kicad
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kicad-doc-en
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kimageformat-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kio-audiocd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kleopatra
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kmail
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kmymoney
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kmymoney-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing knotes
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing konqueror
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing konqueror-nsplugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing konsole
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing konsole-kpart
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kontact
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing konversation
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing konversation-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing korganizer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kpart-webkit
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing krdc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing krita
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing krita-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kross
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kshutdown
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ksystemlog
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kteatime
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ktnef
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ktoblzcheck
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ktorrent
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ktorrent-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kubuntu-desktop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kubuntu-driver-manager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kubuntu-notification-helper
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kubuntu-settings-desktop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kubuntu-web-shortcuts
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kvpm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kwin-addons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kwin-wayland
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kwin-wayland-backend-drm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing kwrite
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing latexila-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lib32z1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libabw-0.1-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libadplug-2.2.1-0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libakonadi-kde4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libakonadi-kmime4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libakonadiprotocolinternals1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libalkimia5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libalut0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libantlr-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libapache2-mod-auth-ntlm-winbind
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libappstreamqt2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libapr1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaprutil1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaprutil1-dbd-sqlite3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaprutil1-ldap
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaqbanking35
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaqbanking35-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaqbanking-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaqebics0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libaqofxconnect7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libarchive-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libatk-wrapper-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libatk-wrapper-java-jni
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libatlas3-base
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libavahi-gobject0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libbaloocore4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libbaloofiles4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libbalooxapian4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libbinio1v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libblkid1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libblosc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libboost-chrono1.62.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libboost-context1.61.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libboost-date-time1.62.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libboost-filesystem1.62.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libboost-system1.62.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libbsd0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libbtparse1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libc6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcacard0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcairo-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcap2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcapi20-3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcapi20-3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcapnp-0.5.3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcapnp-0.5.3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libc-ares2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcauchy0.0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcdt5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcg
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcggl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcgraph6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libchipcard6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libchipcard-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libchipcard-libgwenhywfar60-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libclanapp-1.0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libclass-data-inheritable-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libclass-method-modifiers-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libclass-singleton-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libclass-xsaccessor-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libclick-0.4-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcoin80v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcolord-gtk1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcomerr2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcommons-cli-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libconnectivity-qt1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcortado-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcrypt-openssl-bignum-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcrypt-openssl-rsa-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcsv3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libctemplate2v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcups2-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcupsfilters-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libcupsimage2-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdatetime-locale-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdatetime-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdatetime-timezone-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdb5.3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdbi-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdbus-1-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdbus-cpp5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdebconf-kde1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdiscover2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdmtx0a
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdolphinvcs5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdom4j-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdrm-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdv-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libdw1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libebur128-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libeditorconfig0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libenet7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libexception-class-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libexo-1-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libexo-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libexo-helpers
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libexpat1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libf2fs0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfakekey0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfdk-aac1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfdt1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libffi6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libffi-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfile-sharedir-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfinance-quote-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libflac++6v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libflexdock-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libflickcurl0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-export-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-graphics2d-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-graphicsio-emf-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-graphicsio-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-graphicsio-tests-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-io-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-swing-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreehep-util-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfreerdp-rail1.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfstrcmp0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libftdi1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libftgl2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libfyba0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgadu3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgarcon-1-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgarcon-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgcc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgconfmm-2.6-1v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgcrypt11
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgcrypt20
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgd3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgeotiff2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgepub0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgit2-24
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgl1-mesa-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgl2ps0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgle3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libglib-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgluegen2-jni
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgluegen2-rt-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgmp10
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgnome-autoar-0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgnome-games-support-1-2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgnome-games-support-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgnustep-base1.24
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgnustep-gui0.25
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgnutls30
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-1.7-std1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-1.8-std1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-gorilla-context1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-gorilla-mux1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-gorilla-websocket1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-gosexy-gettext1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-mattn-go-colorable1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-mattn-go-sqlite3-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-olekukonko-tablewriter1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-github-pborman-uuid1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-gocapability1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-golang-x-crypto1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-golang-x-net1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-golang-x-text1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-gopkg-flosch-pongo2.v3-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-gopkg-inconshreveable-log15.v2-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-gopkg-lxc-go-lxc.v2-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-gopkg-tomb.v2-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-gopkg-yaml.v2-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-goprotobuf1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgolang-petname1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgoocanvas-2.0-9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgoocanvas-2.0-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgoogle-glog0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgpg-error0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgpgme++2v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgrantlee-core0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgrantlee-templates5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgrantlee-textdocument5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgsasl7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgtk2-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgtksourceviewmm-3.0-0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgtkspellmm-3.0-0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgvc6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgvpr2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgwengui-cpp0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgwengui-qt4-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgwenhywfar60
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libgwenhywfar-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhardware2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhd21
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhistoryservice0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhogweed4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhsqldb1.8.0-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhtml-element-extended-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhtml-tableextract-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhtml-template-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhttp-parser2.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhunspell-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhybris
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libhybris-common1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libibus-qt1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libibverbs1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libicu57
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libidn11
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libidn2-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libimage-magick-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libimage-magick-q16-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libimlib2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libimport-into-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libinotify-ocaml
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libinotify-ocaml-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libinotifytools0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libinotifytools0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libiptcdata0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libiscsi7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjas-plotter-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjaxen-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjbig-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjdns2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjdom1-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjeuclid-core-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjgoodies-common-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjgoodies-looks-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjgraphx-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjlatexmath-fop-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjlatexmath-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjogl2-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjogl2-jni
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjpeg62
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjpeg8-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjpeg-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjpeg-turbo8-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjreen1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjrosetta-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjs-coffeescript
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjs-jquery-scrollto
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjson-c3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjson-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjson-xs-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjs-prototype
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjs-scriptaculous
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libjs-xmlextras
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkabc4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkaccounts1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkactivities6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkasten3controllers3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkasten3core3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkasten3gui3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkasten3okteta1controllers1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkasten3okteta1core1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkasten3okteta1gui1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkatepartinterfaces4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkcalcore4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkchart2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkchart2-l10n
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkcmutils4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkde3support4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkdeclarative5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkdesu5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkdewebkit5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkdnssd4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkemoticons4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkeybinder-3.0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadiagentbase5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadicontact5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadicore5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadicore-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadimime5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadinotes5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadiprivate5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearch-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearchcore5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearch-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearchdebug5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearchpim5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearch-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadisearchxapian5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5akonadiwidgets5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5alarmcalendar5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5baloowidgets5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5baloowidgets-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5calendarcore5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5calendarsupport5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5calendarsupport-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5calendarutils5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5config-bin-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5config-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5contacts5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5contacts-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5coreaddons-bin-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5coreaddons-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5dbusaddons-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5eventviews5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5eventviews-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5followupreminder5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5gapi-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5gpgmepp-pthread5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5grantleetheme5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5grantleetheme-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5gravatar5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5holidays5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5holidays-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5i18n-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5identitymanagement5abi1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5imap5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5incidenceeditor-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5jsapi5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kaddressbookgrantlee5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kdcraw5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kdepimdbusinterfaces5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kdgantt2-5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kexiv2-15.0.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kiogui5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kipi-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kmanagesieve5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kontactinterface5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5kontactinterface-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5krosscore5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5krossui5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5ksieve5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5ksieve-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5ksieveui5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5ldap5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5libkdepim-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5libkdepim-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5mailcommon-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5mailtransport-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5mbox5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5modemmanagerqt6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5package-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5pimcommon-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5plasma-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5plotting5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5prison1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5purpose5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5purpose-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5qgpgme5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5sane5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5sane-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5sendlater5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5service-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5syndication5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5tnef5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5unitconversion5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5unitconversion-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkf5webkit5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkfile4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkfilemetadata4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkgantt2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkgantt2-l10n
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkholidays4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkhtml5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkidletime4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkio5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkjsapi4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkjsembed4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkldap4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkmediaplayer4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkmime4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libknewstuff2-4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libknewstuff3-4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libknotifyconfig4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkntlm4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkolab1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkolabxml1v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkomparediff2-5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkonq5abi1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkonq5-templates
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkonq-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkonqsidebarplugin4a
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkparts4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkpimidentities4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkpimtextedit4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkpimutils4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkprintutils4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkpty4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkresources4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkrosscore4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkrossui4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktexteditor4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktoblzcheck1v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktorrent-l10n
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktpcommoninternals9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktplogger9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktpmodels9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktpotr9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libktpwidgets9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkubuntu1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libkxmlrpcclient4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblaf-plugin-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblchown-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblensfun1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblensfun-data-v1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libleveldb1v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblinux-inotify2-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libllvm5.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblockfile1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblockfile-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblog4cplus-1.1-9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libloudmouth1-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libltdl-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblttng-ust0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblttng-ust-ctl2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblucene++0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblxc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblz4-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblzma5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liblzma-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libm17n-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libm2mml0.0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmail-dkim-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmail-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmail-spf-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmatio4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmedia1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmetis5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmiglayout-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmime-charset-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmircommon7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmircore1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmonosgen-2.0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmoo-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmount1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmozjs-24-0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmpdclient2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmspack0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libmygpo-qt1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnb-org-openide-util-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnb-org-openide-util-lookup-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libncurses5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libneon27
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnetaddr-ip-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnet-cpp2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnetfilter-acct1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnettle6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnewtonsoft-json5.0-cil
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnfs8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnfsidmap2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnghttp2-14
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnss-myhostname
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libnss-resolve
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libntlm0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libntrack0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libntrack-qt4-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libobjc4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libobjc-6-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libodbc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libofx6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libokteta2core2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libokteta2gui2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopencc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopencolorio1v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopenconnect5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopenimageio1.6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopenjfx-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopenjfx-jni
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libopenthreads20
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing liborcus-0.12-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libosinfo-1.0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libosmesa6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libosmgpsmap-1.0-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libosp5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libotf0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libp11-kit0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpam-cgfs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpam-kwallet4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpango-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpathplan4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpci-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpcre3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpgm-5.2-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libphonenumber7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libphonon4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libphononexperimental4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libphysfs1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libplasma3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpng16-16
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpng16-16
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpng-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpng-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpolkit-qt-1-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpoppler-cpp0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpoppler-qt4-4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libportaudiocpp0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libportsmf0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpqxx-4.0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libprison0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libprocess-cpp3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libprojectm2v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libprotobuf-c1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libprotobuf-lite10
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpsl5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpthread-stubs0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpython2.7-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpython3.6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpython3.6-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpython3.6-minimal
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpython3.6-stdlib
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libpython-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqca2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqca2-plugin-ossl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqca2-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqca-qt5-2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqca-qt5-2-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqdjango-db0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqgpgme7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqimageblitz4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqjdns-qt4-2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqmenumodel0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqofono-qt5-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqrencode3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt4-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5contacts5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5keychain0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5scripttools5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5sensors5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5serialport5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5sql5-mysql
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5systeminfo5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5versit5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5webchannel5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5webengine5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqt5webkit5-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtassistantclient4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtermwidget5-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtscript4-core
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtscript4-gui
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtscript4-network
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtscript4-sql
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtscript4-uitools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtscript4-xml
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqtwebkit-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libquazip1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqxt-core0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libqxt-gui0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing librados2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libraptor1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing librbd1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libref-util-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-java-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-report-builder-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-sdbc-firebird
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-style-oxygen
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-style-tango
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-templates
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-wiki-publisher
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libreoffice-writer2latex
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing librhash0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libroar2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing librole-tiny-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsane-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsane-extras
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsane-extras-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsane-extras-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsasl2-modules
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsbsms10
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libscalar-list-utils-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libscim8v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsdl2-2.0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsdl2-image-2.0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsdl2-mixer-2.0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsdl-ttf2.0-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libselinux1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsensors4-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libserf-1-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libservlet3.1-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsidplay2v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsidplayfp4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libskinlf-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsmbios2v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsmpeg0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsnapd-glib1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsndio6.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsndio6.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsnmp-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsodium-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsolid4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsombok3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsoprano4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsphinxbase3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsphinxbase-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libspice-server1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libspnav0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsqlite3-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsqlite3-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libssl1.0.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libssl-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libstdc++6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libstemmer0d
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libstoken1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libstreamanalyzer0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libstreams0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libstrictures-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsub-quote-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsuperlu4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsvn1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsyndication4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsynfig0v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsys-hostname-long-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libsystemd0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtablelayout-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtag-extras1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtasn1-6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtcl8.5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtelepathy-farstream3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtelepathy-logger-qt5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtelepathy-qt4-2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtelepathy-qt5-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libterm-readkey-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtest-fatal-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libthreadweaver4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libthumbnailer-qt1.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtidy5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtiff5-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtiffxx5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtinfo5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtirpc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtk8.5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtokyocabinet9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtomcrypt0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtommath1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtool
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtool-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtorrent-rasterbar9
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtrust-store2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtxc-dxtn-s2tc0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libtypes-serialiser-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libubuntu-location-service3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libudev1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libudev-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libunicode-linebreak-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libunity-api0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libunity-scopes1.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libusb-1.0-0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libusb-1.0-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libusbredirparser1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libusermetricsinput1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libusermetricsoutput1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libutf8proc2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libuuid1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libuv1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libva-drm1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libva-drm1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libva-wayland1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libva-x11-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libva-x11-1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libvncserver1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwebp6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwebpdemux2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwine-development
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwine-development
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwnck22
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwnck-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libwrap0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libx11-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libx11-xcb-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libx86emu1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxapian-1.3-5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxau-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb1-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-dri2-0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-dri3-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-glx0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-present-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-randr0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-render0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-res0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-shape0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-sync-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-xfixes0-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxcb-xinerama0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxdamage-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxdg-basedir1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxdmcp-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxenstore3.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxext-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfce4ui-1-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfce4ui-2-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfce4ui-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfce4util7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfce4util-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfce4util-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfconf-0-2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfixes-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxfreerdp-client1.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxine2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxine2-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxine2-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxine2-ffmpeg
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxine2-misc-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxine2-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxmlsec1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxmlsec1-nss
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxml-simple-perl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxom-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxpp2-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxpp3-java
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxshmfence-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxxf86vm1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libxxf86vm-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing libyaml-cpp0.3v5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lightworks
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-19-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-20-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-21-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-24-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-26-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-28-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-30-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.10.0-33-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.12.0-12-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.12.0-13-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-11-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-12-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-15-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-16-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-17-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-18-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-19-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-21-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-24-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-25-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-29-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.13.0-30-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.4.0-38-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.4.0-42-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-26-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-27-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-28-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-34-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-37-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-39-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-41-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-46-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-4.8.0-46-lowlatency
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-19-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-20-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-21-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-24-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-26-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-28-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-30-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.10.0-33-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.12.0-12-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.12.0-13-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-11-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-12-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-15-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-16-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-17-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-18-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-19-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-21-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-24-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-25-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-29-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-30-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.13.0-31-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.4.0-38-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.4.0-42-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-26-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-27-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-28-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-34-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-37-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-39-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-41-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-image-extra-4.8.0-46-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-19-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-20-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-21-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-24-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-26-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-28-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-30-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.10.0-33-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.12.0-12-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.12.0-13-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.13.0-11-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.13.0-12-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.13.0-15-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.13.0-16-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.13.0-17-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.4.0-38-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.4.0-42-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-22-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-26-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-27-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-28-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-30-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-34-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-37-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-39-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-41-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-signed-image-4.8.0-46-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-tools-4.13.0-31
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-tools-4.13.0-31-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-tools-4.13.0-32
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-tools-4.13.0-32-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-tools-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing linux-tools-generic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lua-bitop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lua-expat
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lua-filesystem
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lua-json
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lua-socket
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxc1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxc2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxc-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxcfs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxc-templates
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxd-client
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing lxd-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing m17n-db
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing m17n-docs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mariadb-client-10.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mariadb-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mariadb-server-10.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing maxima
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mencoder
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mesa-common-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mesa-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mesa-va-drivers
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing micropolis
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mir-client-platform-mesa5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mir-graphics-drivers-desktop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mixxx
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mknfonts.tool
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing modelio-open-source3.6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mono-complete
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing monodevelop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mono-dmcs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing monodoc-browser
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing monodoc-http
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mono-xsp4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mono-xsp4-base
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mpd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing msr-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing muffin-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing muon
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mutt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mutter
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mutter-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mypaint
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mypaint-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mysql-client
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mysql-server
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mysql-server-5.7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mysql-server-core-5.7
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing mysql-workbench
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nautilus-actions
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nautilus-compare
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nautilus-emblems
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nautilus-owncloud
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nautilus-script-audio-convert
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ncurses-term
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ndisc6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nemo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing neofetch
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing netdiscover
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing network-manager-openvpn
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing network-manager-openvpn-gnome
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nextcloud-client
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nfacct
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nfs-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nodejs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nplan
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ntp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ntrack-module-libnl-0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-361
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-367
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-375
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-378
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-384
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-cg-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-cg-toolkit
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-opencl-icd-361
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-opencl-icd-367
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-opencl-icd-375
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-opencl-icd-378
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing nvidia-opencl-icd-384
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing obs-studio
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ocl-icd-libopencl1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ocrfeeder
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ocrmypdf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing octave
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing octave-info
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing octicons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ofx
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing okular
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing okular-backend-odp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing okular-backend-odt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing okular-extra-backends
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing openjdk-8-jdk
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing openjfx
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing openmpi-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing openshot
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing openttd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing opera-stable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing owncloud-client-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing p7zip
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing p7zip-full
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pam-kwallet-init
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing paperkey
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing parallel
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing partitionmanager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pdfgrep
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pdfsam-basic
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pencil2d
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pep8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing phonon4qt5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing phonon4qt5-backend-gstreamer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing phonon-backend-gstreamer-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing phonon-backend-vlc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php7.0-cli
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php7.0-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php7.0-json
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php7.0-opcache
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php7.0-phpdbg
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php7.0-readline
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing php-smbclient
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pidgin-encryption
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pidgin-gnome-keyring
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pidgin-guifications
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pidgin-hotkeys
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pidgin-libnotify
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pidgin-otr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pinentry-qt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pinentry-qt4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pingus
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-applet-redshift-control
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-dataengines-addons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-desktop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-discover-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-discover-private
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-nm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-runners-addons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-runner-telepathy-contact
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-scriptengine-javascript
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-wallpapers-addons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-widget-redshift
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-widgets-addons
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plasma-workspace-wayland
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plymouth-theme-kubuntu-logo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing plymouth-theme-kubuntu-text
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pokerth
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pokerth-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ppa-purge
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing print-manager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing psensor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing psensor-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing publicsuffix
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pulseaudio-module-gconf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pycodestyle
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing pyqt5-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python2.7-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3.6
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3.6-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3.6-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3.6-examples
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3.6-minimal
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3.6-venv
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-apparmor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-apparmor-click
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-certifi
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-click-package
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-crypto
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-cssselect
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-cssutils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-dbus.mainloop.pyqt5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-distro-info
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-img2pdf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-keyring
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-keyrings.alt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-launchpadlib
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-lazr.restfulclient
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-lazr.uri
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-libapparmor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-lxc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-markdown
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-mysql.connector
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-nose2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-nose2-cov
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-nosehtmloutput
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-oauth
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-olefile
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pip
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-poppler-qt5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-psutil
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pycodestyle
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pygments
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pykde4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pypdf2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pyqt4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pyqt5
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pyqt5.qtmultimedia
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pyqt5.qtopengl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pyqt5.qtsvg
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-pyqt5.qtwebkit
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-rednose
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-regex
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-ruffus
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-secretstorage
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-setuptools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-simplejson
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-sip
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-sqlalchemy
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-venv
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-virtualenv
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-wadllib
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-yaml
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-zmq
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python3-zope.interface
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-appindicator
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-automat
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-autopep8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-certifi
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-click
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-colorama
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-configobj
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-enchant
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-gconf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-glade2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-gtk2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-jinja2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-markupsafe
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-msgpack
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-notify
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-numpy
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-olefile
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-pep8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-pexpect
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-pycurl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-pyexiv2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-pyexiv2-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-pygame
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-qt4
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-qt4-dbus
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-regex
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-reportlab
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-reportlab-accel
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-sane
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-scour
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-setuptools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing python-xdg
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qapt-batch
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qapt-deb-installer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qbittorrent
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-block-extra
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-slof
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-arm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-common
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-mips
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-misc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-ppc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-sparc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-system-x86
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-user
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-user-binfmt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qemu-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qmenumodel-qml
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-org-kde-purpose
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-org-kde-telepathy
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-qtqml-models2
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-qtqml-statemachine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-qtquick-xmllistmodel
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-qtsysteminfo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-qtwebkit
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-ubuntu-connectivity
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qml-module-ubuntu-thumbnailer0.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qownnotes
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qt5-default
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qt5-image-formats-plugins
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qt5keychain-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qtdeclarative5-gsettings1.0
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qtdeclarative5-unity-notifications-plugin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qterminal
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qtermwidget5-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qtscript5-dev
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing qtubuntu-desktop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing rawtherapee
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing rawtherapee-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing re2c
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing recoll
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing redshift
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing referencer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing reiserfsprogs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing remarkable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing repowerd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing rhythmbox-plugin-alternative-toolbar
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ripoff
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ripoff-mp3-plugin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing rosegarden
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing rpcbind
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing rsnapshot
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-bcrypt-pbkdf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-bundler
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-childprocess
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-domain-name
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-erubis
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-ffi
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-http-cookie
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-i18n
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-listen
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-log4r
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-mime-types
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-mime-types-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-molinillo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-net-http-persistent
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-netrc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-net-scp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-net-sftp
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-net-ssh
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-nokogiri
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-pkg-config
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-rb-inotify
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-rbnacl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-rest-client
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-sqlite3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-thor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-unf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ruby-unf-ext
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing runc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sa-compile
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sagemath-upstream-binary
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sane
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab-cli
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab-full-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab-include
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scilab-minimal-bin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scribus-ng
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing scribus-ng-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sddm
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sddm-theme-breeze
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing seabios
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing seahorse-adventures
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing seahorse-nautilus
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sharutils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing shashlik
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sigil
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sigil-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing signon-kwallet-extension
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing simplenote
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing skanlite
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing slack-desktop
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing smbclient
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing smistrip
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing snap-confine
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing snapd-login-service
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing snmp-mibs-downloader
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing software-properties-kde
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing soprano-daemon
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sound-juicer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing spamassassin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing spamassassin-heatu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing spamc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing spice-vdagent
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sqlite3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ssh-askpass-gnome
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sshfs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing sshpass
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing staruml
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing steamcmd
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing steam-launcher
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing supertux
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing supertux-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing synfigstudio
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing teamviewer
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing telepathy-accounts-signon
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing telepathy-gabble
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing telepathy-logger
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing telepathy-salut
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing telephony-service
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tellico
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tellico-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tellico-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tellico-scripts
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing terminal.app
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing terminator
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tesseract-ocr
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tesseract-ocr-deu
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing texlive-generic-extra
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing texlive-lang-german
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing texmaker
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing texstudio
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing thumbnailer-service
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing torbrowser-launcher
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing torchat
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing traceroute
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tracker
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing transcode
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing transcode-doc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing transmission-remote-gtk
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tree
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing trigger-rally-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing trophy
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing trophy-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ttf-aenigma
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tupi
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing tuxfootball
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing twolame
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-advantage-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-app-launch
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-app-launch-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-download-manager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-fan
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-gnome-wallpapers
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntuone-client-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-push-client
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-release-upgrader-qt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing ubuntu-system-settings
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing uidmap
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing umlet
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unetbootin
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unetbootin-translations
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unison-all-gtk
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unity8
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unity-greeter-session-broadcast
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unity-system-compositor
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unpaper
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing unrar
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing url-dispatcher
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing url-dispatcher-tools
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing usb-creator-kde
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing usermetricsservice
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vagrant
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vamp-plugin-sdk
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing variety
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vcdimager
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vim
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing virtualbox-5.1
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing virtualbox-dkms
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing virtualbox-guest-dkms
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing virtualbox-guest-utils
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing virtualbox-guest-x11
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vivaldi-stable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vlc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vlc-nox
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vlc-plugin-notify
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vlc-plugin-samba
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing vocal
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing whois
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing winbind
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wine32
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wine32-development
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wine64
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wine64-development
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wine-development
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wine-stable
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing winetricks
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wireshark-qt
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wkhtmltopdf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing wxmaxima
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xcfa
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xdelta3
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xfce4-panel
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xfce4-screenshooter
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xfconf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xfsprogs
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xjadeo
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xmaxima
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xmir
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xsane
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xscreensaver-data
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xscreensaver-gl
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xserver-xorg-input-libinput
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xserver-xorg-legacy
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xsltproc
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing xwayland
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing yagf
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing zenmap
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing zlib1g
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing zsh
+  apt: name={} state=present
+  tags: Auto
+
+- name: Installing zsync
+  apt: name={} state=present
+  tags: Auto
+
