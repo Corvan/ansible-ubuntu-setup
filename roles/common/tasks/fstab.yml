@@ -1,4 +1,17 @@
-- name: adding mount {{ item.name }} of distation
+- name: ensure that file does not contain mounts
+  lineinfile:
+    path: /etc/fstab
+    state: absent
+    regexp: "{{ item }}"
+  loop:
+    - '//diskstation.lan/audio'
+    - '//diskstation.lan/backup'
+    - '//diskstation.lan/gemeinsam'
+    - '//diskstation.lan/lars'
+    - '//diskstation.lan/music'
+
+
+- name: adding mount {{ item.name }} of disktation
   lineinfile:
     path: /etc/fstab
     state: present
@@ -55,5 +68,3 @@
           pass: '0'
         }
       }
-
-'
