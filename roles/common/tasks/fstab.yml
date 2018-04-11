@@ -3,7 +3,7 @@
     path: /etc/fstab
     state: present
     insertafter: '/dev/disk/by-uuid/*'
-    line: {{ item.mount.dest }} {{ item.mount.mountpooint}} {{ item.mount.protocol }} {{ item.mount.options }} {{ item.mount.dump}} {{ item.mount.pass }}
+    line: "{{ item.mount.dest }} {{ item.mount.mountpooint}} {{ item.mount.protocol }} {{ item.mount.options }}\t{{ item.mount.dump}}\t{{ item.mount.pass }}"
   loop:
     - { name: 'audio',
         mount: {
