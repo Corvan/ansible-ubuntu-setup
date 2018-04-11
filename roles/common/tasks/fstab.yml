@@ -2,7 +2,7 @@
   lineinfile:
     path: /etc/fstab
     state: present
-    insertafter: '/dev/disk'
+    insertafter: '/dev/disk/by-uuid/*'
     line: {{ item.mount.dest }} {{ item.mount.mountpooint}} {{ item.mount.protocol }} {{ item.mount.options }} {{ item.mount.dump}} {{ item.mount.pass }}
   loop:
     - { name: 'audio',
