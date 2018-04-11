@@ -1,0 +1,59 @@
+- name: adding mount {{ item.name }} of distation
+  lineinfile:
+    path: /etc/fstab
+    state: present
+    insertafter: '/dev/disk'
+    line: {{ item.mount.dest }} {{ item.mount.mountpooint}} {{ item.mount.protocol }} {{ item.mount.options }} {{ item.mount.dump}} {{ item.mount.pass }}
+  loop:
+    - { name: 'audio',
+        mount: {
+          dest: '//diskstation.lan/audio',
+          mountpoint: '/mnt/audio',
+          protocol: 'cifs',
+          options: 'rw,nounix,uid=1000,gid=100,dir_mode=0700,file_mode=0700,credentials=/home/lars/.smbcredentials,iocharset=utf8,sec=ntlm,vers=1.0',
+          dump: '0',
+          pass: '0'
+        }
+      }
+    - { name: 'backup',
+        mount: {
+          dest: '//diskstation.lan/backuplars',
+          mountpoint: '/mnt/backup',
+          protocol: 'cifs',
+          options: 'rw,nounix,uid=1000,gid=100,dir_mode=0700,file_mode=0700,credentials=/home/lars/.smbcredentials,iocharset=utf8,sec=ntlm,vers=1.0',
+          dump: '0',
+          pass: '0'
+        }
+      }
+    - { name: 'gemeinsam',
+        mount: {
+          dest: '//diskstation.lan/gemeinsam',
+          mountpoint: '/mnt/gemeinsam',
+          protocol: 'cifs',
+          options: 'rw,nounix,uid=1000,gid=100,dir_mode=0700,file_mode=0700,credentials=/home/lars/.smbcredentials,iocharset=utf8,sec=ntlm,vers=1.0',
+          dump: '0',
+          pass: '0'
+        }
+      }
+    - { name: 'lars',
+        mount: {
+          dest: '//diskstation.lan/lars',
+          mountpoint: '/mnt/lars',
+          protocol: 'cifs',
+          options: 'rw,nounix,uid=1000,gid=100,dir_mode=0700,file_mode=0700,credentials=/home/lars/.smbcredentials,iocharset=utf8,sec=ntlm,vers=1.0',
+          dump: '0',
+          pass: '0'
+        }
+      }
+    - { name: 'music',
+        mount: {
+          dest: '//diskstation.lan/music',
+          mountpoint: '/mnt/music',
+          protocol: 'cifs',
+          options: 'rw,nounix,uid=1000,gid=100,dir_mode=0700,file_mode=0700,credentials=/home/lars/.smbcredentials,iocharset=utf8,sec=ntlm,vers=1.0',
+          dump: '0',
+          pass: '0'
+        }
+      }
+
+'
