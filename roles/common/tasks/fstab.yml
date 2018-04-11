@@ -1,22 +1,10 @@
-- name: ensure that file does not contain mounts
-  lineinfile:
-    path: /etc/fstab
-    state: absent
-    regexp: "{{ item }}"
-  loop:
-    - '//diskstation.lan/audio'
-    - '//diskstation.lan/backup'
-    - '//diskstation.lan/gemeinsam'
-    - '//diskstation.lan/lars'
-    - '//diskstation.lan/music'
-
-
 - name: adding mount {{ item.name }} of disktation
   lineinfile:
     path: /etc/fstab
     state: present
+    regexp: "{{ item.mount.dest }}*"
     insertafter: '/dev/disk/by-uuid/*'
-    line: "{{ item.mount.dest }} {{ item.mount.mountpooint}} {{ item.mount.protocol }} {{ item.mount.options }}\t{{ item.mount.dump}}\t{{ item.mount.pass }}"
+    line: "{{ item.mount.dest }} {{ item.mount.mountpoint}} {{ item.mount.protocol }} {{ item.mount.options }}\t{{ item.mount.dump}}\t{{ item.mount.pass }}"
   loop:
     - { name: 'audio',
         mount: {
@@ -40,7 +28,7 @@
       }
     - { name: 'gemeinsam',
         mount: {
-          dest: '//diskstation.lan/gemeinsam',
+          dest: '//diskstation.lan/Gemeinsam',
           mountpoint: '/mnt/gemeinsam',
           protocol: 'cifs',
           options: 'rw,nounix,uid=1000,gid=100,dir_mode=0700,file_mode=0700,credentials=/home/lars/.smbcredentials,iocharset=utf8,sec=ntlm,vers=1.0',

@@ -3,6 +3,7 @@
 - name: apply common configuration to all nodes
   hosts:
     - all
+    - localhost
 
   roles:
     - common
@@ -12,6 +13,7 @@
 - name: Configuration for Denephor
   hosts:
     - Denephor
+    - localhost
 
   roles:
     - Denephor
