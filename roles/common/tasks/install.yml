@@ -2,47 +2,71 @@
 # This playbook contains common plays that will be run on all nodes.
 
 - name: Update apt Cache
-  apt: update_cache=yes
+  apt:
+    update_cache: yes
+    cache_valid_time: 10800
 
-- name: Installing Android Debugging Tool adb
-  apt: name=adb state=present
-  tags: Android
-
-- name: Installing Amarok Mediaplayer
-  apt: name=amarok state=present
-  tags: Media
-
-- name: Installing Apache Webserver
-  apt: name=apache2-bin state=present
-  tags: Webserver
-
-- name: Installing Apache Webserver Utilities
-  apt: name=apache2-utils state=present
-  tags: Webserver
-
-- name: Installing Aptitude apt wrapper
-  apt: name=aptitude state=present
-  tags: System
-
-- name: Installing Ark packaging archiver
-  apt: name=ark state=present
-  tags: System
-
-- name: Installing apturl for KDE
-  apt: name=apturl-kde state=present
-  tags: KDE
-
-- name: Installing Ardour DAW
-  apt: name=ardour state=present
-  tags:
-    - Media
-    - Audio
+- name: Installing packages
+  apt:
+    name: "{{ item.name  }}"
+    state: present
+  tag: "{{ item.tag }}"
+  loop:
+    - name: adb
+    - name: agedu
+    - name: akonadi-backend-mysql
+    - name: akonadi-server
+    - name: akregator
+    - name: amarok
+    - name: amarok-common
+    - name: amarok-utils
+    - name: android-libadb
+    - name: android-libbacktrace
+    - name: android-libext4-utils
+    - name: android-libf2fs-utils
+    - name: android-libselinux
+    - name: android-libsparse
+    - name: android-libunwind
+    - name: android-libutils
+    - name: android-libziparchive
+    - name: android-sdk-platform-tools-common
+    - name: android-tools-fastboot
+    - name: ansible
+    - name: antlr
+    - name: apache2-bin
+    - name: apache2-utils
+    - name: apparmor-easyprof
+    - name: apparmor-easyprof-ubuntu
+    - name: apport-kde
+    - name: apturl-kde
+    - name: aptitude
+    - name: ark
+    - name: ardour
+    - name: audacity
+    - name: aqbanking-tools
+    - name: aufs-tools
+    - name: autofs
+    - name: basic256
+    - name: brasero
+    - name: calibre
+    - name: clementine
+    - name: cifs-utils
+    - name: cups-backend-bjnp
+    - name: cups-ipp-utils
+    - name: cuneiform
+    - name: darktable
+    - name: davfs2
+    - name: dia
+    - name: dolphin-owncloud
+    - name: exfat-fuse
+    - name: exfat-utils
+    - name: filezilla
 
 - name: Downloading Atom Editor
   get_url:
     url: https://atom.io/download/deb
     dest: /home/lars/Download
-    ownser: lars
+    owner: lars
     group: lars
     mode: 0440
   register: atom_return
@@ -52,245 +76,6 @@
   tags:
     - Software Development
     - Editor
-
-- name: Installing Audacity Audio editor
-  apt: name=audacity state=present
-  tags:
-    - Media
-    - Audio
-
-- name: Installing AqBanking Tools
-  apt: name=aqbanking-tools state=present
-  tags:
-    - Office
-    - Money
-
-- name: Installing AUFS-Tools
-  apt: name=aufs-tools state=present
-  tags: System
-
-- name: Installing AutoFS
-  apt: name=autofs state=present
-  tags:
-    - System
-    - Filesystem
-
-- name: Installing Basic256 IDE
-  apt: name=basic256 state=present
-  tags:
-    - Software Development
-    - IDE
-
-- name: Installing Blender 3D Graphics Generator
-  apt: name=audacity state=present
-  tags: Graphics
-
-- name: Installing Brasero CD-Burner
-  apt: name=brasero state=present
-  tags:
-    - Media
-    - Audio
-
-- name: Installing Calibre E-Book Suite
-  apt: name=calibre state=present
-  tags:
-    - Media
-    - Books
-
-- name: Installing Clementine CD Ripper
-  apt: name=clementine state=present
-  tags:
-    - Media
-    - Audio
-
-- name: Installing CIFS-Utils
-  apt: name=cifs-utils state=present
-  tags:
-    - System
-    - Filesystem
-
-- name: Installing CUPS backend
-  apt: name=cups-backend-bjnp state=present
-  tags:
-    - System
-    - Printer
-
-- name: Installing CUPS Internet Printing Protocoll Utitltites
-  apt: name=cups-ipp-utils state=present
-  tags:
-    - System
-    - Printer
-
-- name: Installing Cuneiform OCR
-  apt: name=cuneiform state=present
-  tags:
-    - Office
-    - Documents
-
-- name: Installing Darktable Photo editor
-  apt: name=darktable state=present
-  tags:
-    - Media
-    - Photo
-
-- name: Installing DAVFS WebDAV filesystem integration
-  apt: name=davfs2 state=present
-  tags:
-    - System
-    - Filesystem
-
-- name: Installing Dia Diagram Drawing
-  apt: name=dia state=present
-  tags:
-    - Media
-    - Graphics
-
-- name: Installing Owncloud/Nextcloud Integration for dolphin
-  apt: name=dolphin-owncloud state=present
-  tags:
-    - System
-    - Filemanager
-
-- name: Installing extended FAT FUSE integration
-  apt: name=exfat-fuse state=present
-  tags:
-    - System
-    - Filesystem
-
-- name: Installing extended FAT Utitltites
-  apt: name=exfat-utils state=present
-  tags:
-    - System
-    - Filesystem
-
-- name:  Installing Filezilla file transfer
-  apt: name=Filezilla state=present
-  tags:
-    - System
-    - Filemanager
-- name: Installing accountsservice-ubuntu-schemas
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing accountsservice-ubuntu-touch-schemas
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing accountwizard
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing adb
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing adwaita-icon-theme-full
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing agedu
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing akonadi-backend-mysql
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing akonadi-server
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing akregator
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing amarok
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing amarok-common
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing amarok-utils
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libadb
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libbacktrace
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libext4-utils
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libf2fs-utils
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libselinux
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libsparse
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libunwind
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libutils
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-libziparchive
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-sdk-platform-tools-common
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing android-tools-fastboot
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing ansible
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing antlr
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing apache2-bin
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing apparmor-easyprof
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing apparmor-easyprof-ubuntu
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing apport-kde
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing aptitude
-  apt: name={} state=present
-  tags: Auto
-
-- name: Installing apturl-kde
-  apt: name={} state=present
-  tags: Auto
 
 - name: Installing apt-xapian-index
   apt: name={} state=present
