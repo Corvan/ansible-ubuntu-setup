@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ansible-playbook -v site.yml
+ansible-playbook --ask-become-pass site.yml
