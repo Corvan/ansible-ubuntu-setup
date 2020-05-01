@@ -1,0 +1,22 @@
+# {{ ansible_managed }}
+[Desktop Entry]
+Categories=Network
+Comment[de_DE]=
+Comment=
+Exec={{ nextcloud_client.dest }}
+GenericName[de_DE]=File Synchronizer
+GenericName=File Synchronizer
+Icon=nextcloud
+MimeType=
+Name[de_DE]=Nextcloud
+Name=Nextcloud
+Path=
+StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-GNOME-Autostart-enabled=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=

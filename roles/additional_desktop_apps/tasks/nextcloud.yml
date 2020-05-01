@@ -1,5 +1,5 @@
 ---
-- name: Installing nextcloud-client
+- name: Ensure Nextcloud client is installed
   get_url:
     url: https://download.nextcloud.com/desktop/releases/Linux/latest
     dest: "/home/{{ ubuntu.user.name }}/Downloads"
@@ -9,4 +9,10 @@
     force: False
   register: nextcloud_client
 
-# TODO: add autostart and start menu entry
+- name: Ensure Nextcloud start menu entry is added or adapted
+  template:
+    src: nextcloud/nextcloud.desktop
+    dest: "~{{ ubuntu.user.name }}/.local/share/applications/nextcloud.desktop"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    mode: 0755
