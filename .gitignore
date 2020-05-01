@@ -1,3 +1,4 @@
 packages.txt
 *.retry
 .idea
+/venv-setup/

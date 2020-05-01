@@ -1,3 +1,0 @@
----
-- import_tasks: roles/common/tasks/install.yml
-- import_tasks: roles/common/tasks/fstab.yml
