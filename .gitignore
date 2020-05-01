@@ -2,3 +2,4 @@ packages.txt
 *.retry
 .idea
 /venv-setup/
+.vault-password
