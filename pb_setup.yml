@@ -1,9 +1,13 @@
 ---
-- name: apply packages configuration
-  hosts:
-    - all
+- name: Install ubuntu packages
+  hosts: all
   roles:
     - packages
   become: true
-  become_user: root
+
+- name: Install additional desktop packages
+  hosts: desktop
+  roles:
+    - additional_desktop_apps
+  become: true
 

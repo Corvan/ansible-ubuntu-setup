@@ -4,12 +4,11 @@
     update_cache: yes
     cache_valid_time: 10800
 
-- name: Installing packages
+- name: Installing ubuntu packages
   apt:
     name: "{{ ubuntu.packages.common | union(ubuntu.packages.special) | union(ubuntu.packages.host) }}"
     state: present
 
-# TODO: nextcloud
 # TODO: dbeaver
 # TODO: PyCharm
 # TODO: Vivaldi

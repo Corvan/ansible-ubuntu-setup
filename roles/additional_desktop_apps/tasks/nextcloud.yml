@@ -1,0 +1,12 @@
+---
+- name: Installing nextcloud-client
+  get_url:
+    url: https://download.nextcloud.com/desktop/releases/Linux/latest
+    dest: "/home/{{ ubuntu.user.name }}/Downloads"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    mode: 0755
+    force: False
+  register: nextcloud_client
+
+# TODO: add autostart and start menu entry
