@@ -142,5 +142,10 @@ ubuntu:
       - xmir
       - xsane
       - yagf
+    additional:
+      desktop:
+        - nextcloud-client
+        - vagrant
+        - staruml
 
 

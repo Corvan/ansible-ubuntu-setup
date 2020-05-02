@@ -63,3 +63,5 @@ ubuntu:
       - zsync
     special: []
     host: []
+    additional:
+      desktop: []

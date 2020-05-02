@@ -1,2 +1,6 @@
 ---
-- import_tasks: nextcloud.yml
+- include_tasks: nextcloud.yml
+  when: '"nextcloud-client" in ubuntu.packages.additional.desktop'
+# TODO: PyCharm
+# TODO: vagrant
+# TODO: staruml
