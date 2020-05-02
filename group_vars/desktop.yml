@@ -41,6 +41,7 @@ ubuntu:
       - code
       - cuneiform
       - darktable
+      - dbeaver-ce
       - dia
       - dia-shapes
       - dialog

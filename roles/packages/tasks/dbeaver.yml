@@ -1,0 +1,6 @@
+---
+- name: Ensure dbeaver repo definition is present
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/serge-rider/dbeaver-ce/ubuntu disco main
+    state: present
+    filename: serge-rider-ubuntu-dbeaver-ce-disco

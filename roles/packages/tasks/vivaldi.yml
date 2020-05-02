@@ -1,0 +1,6 @@
+---
+- name: Ensure Vivaldi repo definition is present
+  apt_repository:
+    repo: deb http://repo.vivaldi.com/stable/deb/ stable main
+    state: present
+    filename: vivaldi

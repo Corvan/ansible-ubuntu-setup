@@ -1,2 +1,6 @@
 ---
+- include_tasks: vivaldi.yml
+  when: '"vivaldi-stable" in ubuntu.packages.special or "vivaldi-stable" in ubuntu.packages.host'
+- include_tasks: dbeaver.yml
+  when: '"dbeaver-ce" in ubuntu.packages.special or "dbeaver-ce" in ubuntu.packages.host'
 - import_tasks: install.yml

@@ -9,10 +9,3 @@
     name: "{{ ubuntu.packages.common | union(ubuntu.packages.special) | union(ubuntu.packages.host) }}"
     state: present
 
-# TODO: dbeaver
-# TODO: PyCharm
-# TODO: Vivaldi
-# TODO: vagrant
-# TODO: staruml
-# TODO: ohmyzsh
-
