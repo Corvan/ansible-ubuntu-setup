@@ -1,6 +1,7 @@
 ---
 - include_tasks: nextcloud.yml
   when: '"nextcloud-client" in ubuntu.packages.additional.desktop'
+- include_tasks: vagrant.yml
+  when: '"vagrant" in ubuntu.packages.additional.desktop'
 # TODO: PyCharm
-# TODO: vagrant
 # TODO: staruml

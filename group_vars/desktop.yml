@@ -144,8 +144,10 @@ ubuntu:
       - yagf
     additional:
       desktop:
-        - nextcloud-client
-        - vagrant
-        - staruml
+        nextcloud-client: null
+        vagrant:
+          version: 2.2.7
+          arch: x86_64
+        staruml: null
 
 

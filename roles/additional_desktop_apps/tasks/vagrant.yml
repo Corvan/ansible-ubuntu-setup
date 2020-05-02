@@ -1,0 +1,20 @@
+---
+- name: Check if vagrant is already downloaded
+  stat:
+    path: "~{{ ubuntu.user.name }}/Downloads/vagrant_{{ ubuntu.packages.additional.desktop.vagrant.version }}_{{ ubuntu.packages.additional.desktop.vagrant.arch }}.deb"
+  register: vagrant_deb
+
+- name: Ensure vagrant deb file is downloaded
+  get_url:
+    url: "https://releases.hashicorp.com/vagrant/{{ ubuntu.packages.additional.desktop.vagrant.version }}/vagrant_{{ ubuntu.packages.additional.desktop.vagrant.version }}_{{ ubuntu.packages.additional.desktop.vagrant.arch }}.deb"
+    dest: "~{{ ubuntu.user.name }}/Downloads"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    mode: 0755
+    force: False
+  when: not vagrant_deb.stat.exists
+
+- name: Ensure vagrant is installed
+  apt:
+    deb: "~{{ ubuntu.user.name }}/Downloads/vagrant_{{ ubuntu.packages.additional.desktop.vagrant.version }}_{{ ubuntu.packages.additional.desktop.vagrant.arch }}.deb"
+    state: present
