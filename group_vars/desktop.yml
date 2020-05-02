@@ -150,5 +150,8 @@ ubuntu:
           arch: x86_64
         staruml:
           version: 3.2.2
+        pycharm:
+          edition: professional
+          version: 2020.1
 
 

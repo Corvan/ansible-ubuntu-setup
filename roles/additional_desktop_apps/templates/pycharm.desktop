@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/opt/pycharm-{{ ubuntu.packages.additional.desktop.pycharm.version }}/bin/pycharm.sh
+Icon=/opt/pycharm-{{ ubuntu.packages.additional.desktop.pycharm.version }}/bin/pycharm.png
+Name[de_DE]=PyCharm
+Name=PyCharm
+StartupNotify=true
+Terminal=false
+Type=Application

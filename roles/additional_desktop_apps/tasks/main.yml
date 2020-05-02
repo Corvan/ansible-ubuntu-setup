@@ -5,4 +5,5 @@
   when: '"vagrant" in ubuntu.packages.additional.desktop'
 - include_tasks: staruml.yml
   when: '"staruml" in ubuntu.packages.additional.desktop'
-# TODO: PyCharm
+- include_tasks: pycharm.yml
+  when: '"pycharm" in ubuntu.packages.additional.desktop'

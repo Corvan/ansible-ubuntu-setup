@@ -1,0 +1,31 @@
+---
+- name: Check if PyCharm is already installed
+  stat:
+    path: "/opt/pycharm-{{ ubuntu.packages.additional.desktop.pycharm.version }}"
+  register: pycharm
+
+- name: Ensure PyCharm is downloaded
+  get_url:
+    url: "https://download.jetbrains.com/python/pycharm-{{ ubuntu.packages.additional.desktop.pycharm.edition }}-{{ ubuntu.packages.additional.desktop.pycharm.version }}.tar.gz"
+    dest: "~{{ ubuntu.user.name }}/Downloads"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    force: false
+  when: not pycharm.stat.exists
+
+- name: Ensure PyCharm is extracted
+  unarchive:
+    src: "~{{ ubuntu.user.name }}/Downloads/pycharm-{{ ubuntu.packages.additional.desktop.pycharm.edition }}-{{ ubuntu.packages.additional.desktop.pycharm.version }}.tar.gz"
+    dest: "/opt/pycharm-{{ ubuntu.packages.additional.desktop.pycharm.version }}"
+    owner: root
+    group: users
+    remote_src: True
+  when: not pycharm.stat.exists
+
+- name: Ensure PyCharm start menu entry is added or adapted
+  template:
+    src: nextcloud.desktop
+    dest: "~{{ ubuntu.user.name }}/.local/share/applications/PyCharm.desktop"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    mode: 0755
