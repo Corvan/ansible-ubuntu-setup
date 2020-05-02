@@ -148,6 +148,7 @@ ubuntu:
         vagrant:
           version: 2.2.7
           arch: x86_64
-        staruml: null
+        staruml:
+          version: 3.2.2
 
 

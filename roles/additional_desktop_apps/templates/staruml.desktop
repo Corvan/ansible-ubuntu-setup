@@ -1,0 +1,11 @@
+# {{ ansible_managed }}
+[Desktop Entry]
+Name=StarUML
+Comment=A sophisticated software modeler
+Exec="/home/lars/Downloads/StarUML-{{ ubuntu.packages.additional.desktop.staruml.version }}.AppImage" %U
+Terminal=false
+Type=Application
+Icon=appimagekit-staruml
+X-AppImage-Version={{ ubuntu.packages.additional.desktop.staruml.version }}
+Categories=Development;
+TryExec=/home/lars/Downloads/StarUML-{{ ubuntu.packages.additional.desktop.staruml.version }}.AppImage

@@ -1,0 +1,23 @@
+---
+- name: Check if StarUML is already downloaded
+  stat:
+    path: "~{{ ubuntu.user.name }}/Downloads/StarUML-{{ ubuntu.packages.additional.desktop.staruml.version }}.AppImage"
+  register: staruml_AppImage
+
+- name: Ensure StarUML is downloaded
+  get_url:
+    url: "http://staruml.io/download/releases/StarUML-{{ ubuntu.packages.additional.desktop.staruml.version }}.AppImage"
+    dest: "~{{ ubuntu.user.name }}/Downloads"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    mode: 0755
+    force: False
+  when: not staruml_AppImage.stat.exists
+
+- name: Ensure StarUML start menu entry is created or adapted
+  template:
+    src: staruml.desktop
+    dest: "~{{ ubuntu.user.name }}/.local/share/applications/appimagekit-staruml.desktop"
+    owner: "{{ ubuntu.user.name }}"
+    group: "{{ ubuntu.user.name }}"
+    mode: 0755
