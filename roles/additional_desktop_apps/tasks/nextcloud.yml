@@ -11,7 +11,7 @@
 
 - name: Ensure Nextcloud start menu entry is added or adapted
   template:
-    src: nextcloud/nextcloud.desktop
+    src: nextcloud.desktop
     dest: "~{{ ubuntu.user.name }}/.local/share/applications/nextcloud.desktop"
     owner: "{{ ubuntu.user.name }}"
     group: "{{ ubuntu.user.name }}"
