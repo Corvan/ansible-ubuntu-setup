@@ -11,3 +11,10 @@
     - additional_desktop_apps
   become: true
 
+- name: Setup user
+  hosts: all
+  roles:
+    - user
+  become: true
+
+

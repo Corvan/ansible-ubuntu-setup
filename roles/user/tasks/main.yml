@@ -1,0 +1,12 @@
+---
+- name: Ensure user exists
+  user:
+    name: "{{ ubuntu.user.name }}"
+    uid: "{{ ubuntu.user.uid if ubuntu.user.uid else null }}"
+    group: "{{ ubuntu.user.name }}"
+    groups: "{{ ubuntu.user.groups if ubuntu.user.groups else null }}"
+    append: True
+    password: "{{ ubuntu.user.password if ubuntu.user.password else null }}"
+    update_password: on_create
+
+# TODO: ssh-key

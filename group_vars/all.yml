@@ -65,3 +65,10 @@ ubuntu:
     host: []
     additional:
       desktop: []
+  ubuntu:
+  user:
+    name:
+    uid:
+    password:
+    groups:
+    dotfiles:
