@@ -1,0 +1,5 @@
+---
+- name: Ensure zsh-autosuggestions is installed
+  git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/custom/plugins/zsh-autosuggestions"

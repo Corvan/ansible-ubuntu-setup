@@ -1,0 +1,12 @@
+---
+- name: Ensure .zshrc is configured
+  shell:
+    cmd: "vcsh clone {{ ubuntu.user.dotfiles.zshrc }} zsh"
+    chdir: "~"
+    creates: "~/.config/vcsh/repo.d/zsh.git"
+
+- name: Ensure .zshrc gitignore is written
+  shell:
+    cmd: "vcsh write-gitignore zsh"
+    chdir: "~"
+    creates: "~/.gitignore.d/zsh"

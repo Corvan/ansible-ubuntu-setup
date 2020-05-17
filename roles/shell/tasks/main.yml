@@ -1,0 +1,5 @@
+---
+- import_tasks: ohmyzsh.yml
+- import_tasks: zsh-syntax-highlighting.yml
+- import_tasks: zsh-autosuggestions.yml
+- import_tasks: zshrc.yml

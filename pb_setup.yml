@@ -17,4 +17,11 @@
     - user
   become: true
 
+- name: setup user settings
+  hosts: all
+  roles:
+    - shell
+  become: true
+  become_user: "{{ ubuntu.user.name }}"
+  tags: user_settings
 

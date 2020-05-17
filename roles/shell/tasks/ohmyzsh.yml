@@ -1,0 +1,11 @@
+---
+- name: Check if .ohmyzsh is present
+  stat:
+    path: "~/.oh-my-zsh"
+  register: ohmyzsh
+
+- name: Ensure ohmyzsh is installed
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --unantended"
+  when:
+    - not ohmyzsh.stat.exists
+    - not ohmyzsh.stat.isdir
